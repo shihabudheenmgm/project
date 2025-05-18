@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -13,21 +13,6 @@ interface Props {
 const AuthModal = ({ openModal, setOpenModal }: Props) => {
     const modalRef = useRef<HTMLDivElement | null>(null);
     const [phone, setPhone] = useState("");
-
-    // useEffect(() => {
-    //     const handleClickOutside = (event: MouseEvent) => {
-    //         if (
-    //             modalRef.current &&
-    //             !modalRef.current.contains(event.target as Node)
-    //         ) {
-    //             setOpenModal(null);
-    //         }
-    //     };
-    //     document.addEventListener("mousedown", handleClickOutside);
-    //     return () => {
-    //         document.removeEventListener("mousedown", handleClickOutside);
-    //     };
-    // }, [setOpenModal]);
 
     if (!openModal) return null;
 
