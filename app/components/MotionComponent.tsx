@@ -1,13 +1,19 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, MotionProps } from "framer-motion";
+import { ElementType, ReactNode } from "react";
 
-const MotionComponent = ({ as, children, ...props }) => {
-  const ChildrenComponent = motion.create(as, {
-    forwardMotionProps: true,
-  });
+interface MotionComponentProps extends MotionProps {
+  as: ElementType;
+  children: ReactNode;
+  className?: string;
+}
 
-  return <ChildrenComponent {...props}>{children}</ChildrenComponent>;
+const MotionComponent = ({ as, children, ...props }: MotionComponentProps) => {
+  const MotionTag = motion(as);
+
+  return <MotionTag {...props}>{children}</MotionTag>;
 };
 
 export default MotionComponent;
+
