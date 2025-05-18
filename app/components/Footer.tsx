@@ -69,7 +69,7 @@ const Footer = () => {
                                 alt=""
                                 width={"60"}
                                 height={"60"}
-                                className="w-24"
+                                className="lg:w-24 w-20"
                             />
                         </Link>
                         <Link href={"https://google.com"}>
@@ -78,7 +78,7 @@ const Footer = () => {
                                 alt=""
                                 width={"180"}
                                 height={"60"}
-                                className="w-40"
+                                className="lg:w-40 w-28"
                             />
                         </Link>
                     </div>
@@ -93,7 +93,7 @@ const Footer = () => {
                                         <li key={linkIndex}>
                                             <Link
                                                 href={link.href}
-                                                className="text-gray-500 hover:text-baseclr transition">
+                                                className="text-gray-500 text-sm lg:text-base hover:text-baseclr transition">
                                                 {link.label}
                                             </Link>
                                         </li>

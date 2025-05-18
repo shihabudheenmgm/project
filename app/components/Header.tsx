@@ -15,7 +15,7 @@ const Header = () => {
                             alt=""
                             width={"60"}
                             height={"60"}
-                            className="w-24"
+                            className="w-20 lg:w-24"
                         />
                     </Link>
                     <Navbar />
